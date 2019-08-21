@@ -1,0 +1,258 @@
+.service {
+    padding: $pd-4 0;
+    background-color: $color-gray-1;
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        @include text($color-black-0, $fs-0 + 30, $fw-bold-0);
+        letter-spacing: $ls-1;
+        margin-bottom: $mg-1 + 5;
+    }
+    p{
+        @include text($color-black-0, $fs-0, $fw-normal);
+        letter-spacing: $ls-1 - 4;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+    .service_items {
+        position: relative;
+        margin-top: $mg-2 + 25;
+        .item {
+            height: 280px;
+            img {
+                width: 90%;
+                height: 280px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                transition: all 0.3s;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+            }
+            .service_overlay {
+                position: absolute;
+                bottom: 0px;
+                left: 10px;
+                width: 100%;
+                .overlay_content {
+                    h5 {
+                        @include text($color-brown-0, $fs-0 + 1, $fw-bold-1);
+                        letter-spacing: $ls-1 - 4;
+                        margin-bottom: $mg-0;
+                        text-transform: uppercase;
+                    }
+                    h4 {
+                        @include text($color-black-0, $fs-0 - 1, $fw-normal);
+                        text-transform: capitalize;
+                        letter-spacing: $ls-1 - 4;
+                        margin-top: $mg-0 + 3;
+                    }
+                }
+            }
+            &:hover {
+                img {
+                    top: -50px;
+                }
+            }
+        }
+        .owl-nav {
+            .owl-prev {
+                position: relative;
+                outline: none;
+                span {
+                    position: absolute;
+                    top: -193px;
+                    left: -574px;
+                    @include text($color-brown-0, $fs-0 + 12, $fw-bold-0);
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 40px;
+                    text-align: center;
+                    margin: 0;
+                    background-color: $color-white-0;
+                    border-radius: 22px;
+                    -webkit-border-radius: 22px;
+                    -moz-border-radius: 22px;
+                    -ms-border-radius: 22px;
+                    -o-border-radius: 22px;
+                    box-shadow: $bs-0;
+                }
+            }
+            .owl-next {
+                position: relative;
+                outline: none;
+                span {
+                    position: absolute;
+                    top: -193px;
+                    right: -546px;
+                    @include text($color-brown-0, $fs-0 + 12, $fw-bold-0);
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 40px;
+                    text-align: center;
+                    margin: 0;
+                    background-color: $color-white-0;
+                    border-radius: 22px;
+                    -webkit-border-radius: 22px;
+                    -moz-border-radius: 22px;
+                    -ms-border-radius: 22px;
+                    -o-border-radius: 22px;
+                    box-shadow: $bs-0;                    
+                }
+            }
+        }
+        .owl-dots {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .service{
+        .service_items{
+            .item{
+                img{
+                    height: 250px;
+                }
+                .service_overlay{
+                    left: 6px;
+                    bottom: 25px;
+                    .overlay_content{
+                        h5{
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                .owl-prev{
+                    span{
+                        top: -205px;
+                        left: -484px;
+                    }
+                }
+                .owl-next{
+                    span{
+                        top: -205px;
+                        right: -461px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .service{
+        .service_items{
+            .item{
+                img{
+                    height: 235px;
+                }
+                .service_overlay{
+                    left: 6px;
+                    bottom: 40px;                    
+                }
+            }
+            .owl-nav{
+                .owl-prev{
+                    span{
+                        top: -210px;
+                        left: -364px;
+                    }
+                }
+                .owl-next{
+                    span{
+                        top: -210px;
+                        right: -341px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .service{
+        .service_items{
+            .item{
+                img{
+                    height: 180px;
+                }
+                .service_overlay{
+                    left: 6px;
+                    bottom: 95px;
+                    .overlay_content{
+                        h5{
+                            @include text($color-brown-0, $fs-0, $fw-bold-1);
+                        }
+                        h4{
+                            letter-spacing: 0;
+                        }
+                    }                    
+                }
+            }
+            .owl-nav{
+                .owl-prev{
+                    span{
+                        top: -237px;
+                        left: -275px;
+                    }
+                }
+                .owl-next{
+                    span{
+                        top: -237px;
+                        right: -258px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .service{
+        .service_items{
+            .item{
+                img{
+                    width: 80%;
+                    height: 285px;
+                    padding-left: 19%;
+                }
+                .service_overlay{
+                    left: 108px;
+                    bottom: -5px;
+                    .overlay_content{
+                        h5{
+                            @include text($color-brown-0, $fs-0, $fw-bold-1);
+                        }
+                        h4{
+                            letter-spacing: $ls-1 - 4;
+                        }
+                    }                    
+                }
+            }
+            .owl-nav{
+                .owl-prev{
+                    span{
+                        top: -195px;
+                        left: -185px;
+                    }
+                }
+                .owl-next{
+                    span{
+                        top: -195px;
+                        right: -177px;
+                    }
+                }
+            }
+        }
+    }
+}
